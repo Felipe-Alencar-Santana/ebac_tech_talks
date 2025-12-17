@@ -1,0 +1,26 @@
+@use '../variavel.scss';
+
+.button{
+    padding: 12px;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+    white-space: nowrap;
+
+    &--primary{
+        color: variavel.$txtColor;
+        background-color: variavel.$btnColor;
+    }
+
+    @media(max-width: 640px){
+        display: block;
+        width: 100%;
+    }
+
+    @media(max-width: 1024px){
+        display: flex;
+        align-items: center;
+    }
+}

@@ -1,0 +1,63 @@
+@use 'variavel';
+
+.event {
+    padding: 80px 0;
+
+    &--frontend{
+        background-image: linear-gradient(variavel.$blue1, variavel.$blue2);
+    }
+
+    &--ux-ui{
+        background-image: linear-gradient(variavel.$blue2, variavel.$pink);
+    }
+
+    &--data-science{
+        background-image: linear-gradient(variavel.$pink, variavel.$yellow);
+    }
+
+    &--backend{
+        background-image: linear-gradient(variavel.$yellow, variavel.$pink);
+    }
+
+    &--imagem-left{
+        .container{
+            flex-direction: row-reverse;
+        }
+    }
+
+    .container{
+        display: flex;
+        gap: 40px;
+    }
+
+    &__imagem{
+        max-width: 360px;
+    }
+
+    &__details{
+        &__title{
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 16px;
+        }
+
+        &__description{
+            line-height: 22px;
+        }
+    }
+
+    @media(max-width: 640px){
+        .container{
+            display: block;
+        }
+
+        &__imagem{
+            width: 100%;
+        }
+
+        &__details{
+            gap: 0;
+            margin-bottom: 16px;
+        }
+    }
+}
